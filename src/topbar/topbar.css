@@ -17,9 +17,6 @@
   align-items: center;
   justify-content: center;
 }
-.topLeft {
-  justify-content: space-around;
-}
 
 .topCenter {
   justify-content: center;
@@ -32,6 +29,7 @@
   font-size: 20px;
   margin-right: 10x;
   color: #444;
+  padding: 10px;
 }
 
 .topImg {
