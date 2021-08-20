@@ -1,6 +1,8 @@
 .post {
-  width: 70%;
+  width: 43%;
   margin: 0 25px 40px 25px;
+  padding: 0.75rem;
+  box-shadow: 3px 3px 6px #cecfd4, -3px -3px 6px #fff;
 }
 
 .postImg {
@@ -28,10 +30,28 @@
   font-family: "Josefin Sans", sans-serif;
   font-style: 24px;
   font-weight: 700;
-  margin-top: 15px;
   cursor: pointer;
+  padding: 1rem;
+}
+.line-height {
+  margin: 1rem 0;
+}
+.postDescription {
+  font-family: "Varela Round", sans-serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .postDate {
   font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 13px;
+  margin-top: 15;
+  color: #9999;
 }

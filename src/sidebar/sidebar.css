@@ -3,6 +3,8 @@
   margin: 20px;
   padding-bottom: 30px;
   background-color: #fdfbfb;
+  box-shadow: 3px 3px 6px #cecfd4, -3px -3px 6px #fff;
+
   border-radius: 10px;
   flex-direction: column;
   display: flex;
