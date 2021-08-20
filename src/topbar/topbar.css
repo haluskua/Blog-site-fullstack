@@ -8,6 +8,7 @@
   justify-content: center;
   font-family: "Montserat", sans-serif;
   font-weight: bold;
+  z-index: 999;
 }
 
 .topLeft,
