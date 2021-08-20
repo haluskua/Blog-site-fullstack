@@ -1,5 +1,5 @@
 import "./sidebar.css";
-import myPic from "../images/profile.jpg";
+import myPic from "../../images/profile.jpg";
 
 export default function Sidebar() {
   return (
