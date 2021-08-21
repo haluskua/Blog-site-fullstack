@@ -1,6 +1,7 @@
 import TopBar from "./components/topbar/TopBar";
+import Login from "./pages/login/Login";
 // import Write from "./components/write/Write";
-import Settings from "./pages/settings/Settings";
+// import Settings from "./pages/settings/Settings";
 // import Single from "./pages/single/Single";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
       <TopBar />
       {/* <Single /> */}
       {/* <Write /> */}
-      <Settings />
+      {/* <Settings /> */}
+      <Login />
     </>
   );
 }

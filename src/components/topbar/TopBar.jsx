@@ -1,5 +1,5 @@
 import "./topbar.css";
-import Profile from "../../images/crest_trans_brown.png";
+import Profile from "../../images/crest_trans_black.png";
 
 export default function TopBar() {
   return (
