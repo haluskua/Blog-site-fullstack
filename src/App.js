@@ -1,20 +1,39 @@
 import TopBar from "./components/topbar/TopBar";
 import Register from "./pages/register/Register";
-// import Login from "./pages/login/Login";
-// import Write from "./components/write/Write";
-// import Settings from "./pages/settings/Settings";
-// import Single from "./pages/single/Single";
+
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Write from "./components/write/Write";
+import Settings from "./pages/settings/Settings";
+import Single from "./pages/single/Single";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <Router>
       <TopBar />
-      {/* <Single /> */}
-      {/* <Write /> */}
-      {/* <Settings /> */}
-      {/* <Login /> */}
-      <Register />
-    </>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/write">
+          <Write />
+        </Route>
+        <Route path="/settings">
+          <Settings />
+        </Route>
+        <Route path="/post/:postId">
+          <Single />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

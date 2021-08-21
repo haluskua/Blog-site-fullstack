@@ -13,7 +13,7 @@ export default function Settings() {
         <form className="settingsForm">
           <label>Profile Picture</label>
           <div className="settingsPP">
-            <img src={proPic} alt="profile picture" />
+            <img src={proPic} alt="profile" />
             <label htmlFor="fileInput">
               <i className="settingsPPIcon fas fa-user-circle"></i>
             </label>
