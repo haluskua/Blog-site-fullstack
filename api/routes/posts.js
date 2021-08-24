@@ -92,4 +92,6 @@ router.get("/", async (req, res) => {
   }
 });
 
+// localhost:5000/api/posts/?user=nelannPost
+
 module.exports = router;
