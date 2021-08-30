@@ -1,5 +1,6 @@
-import "./post.css";
+import { Link } from "react-router-dom";
 // import postImg from "../../images/haus.jpg";
+import "./post.css";
 
 export default function Post({ post }) {
   return (
@@ -11,7 +12,9 @@ export default function Post({ post }) {
             <pan className="postCat">{c.name}</pan>;
           })}
         </div>
-        <span className="postTitle">{post.title}</span>
+        <Link to={`/post/${post._id}`} className="link">
+          <span className="postTitle">{post.title}</span>
+        </Link>
         <hr className="line-height" />
         <div className="postDate">
           {" "}
