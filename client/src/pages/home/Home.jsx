@@ -6,20 +6,29 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [post, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/posts");
-      console.log(res);
+      try {
+        const res = await axios.get("/api/posts");
+        setPosts(res.data);
+        console.log(res);
+      } catch (error) {
+        // Not in the 200 response range
+        // console.log(error.response.data);
+        // console.log(error.response.status);
+        // console.log(error.response.headers);
+      }
     };
     fetchPosts();
   }, []);
+
   return (
     <>
       <Header />
       <div className="home">
-        <Posts />
+        <Posts posts={posts} />
         <Sidebar />
       </div>
     </>

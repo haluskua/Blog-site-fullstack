@@ -1,17 +1,23 @@
 //creating express server
 
 const express = require("express");
-const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
-const multer = require("multer");
 const port = process.env.PORT || 5000;
+const multer = require("multer");
+const app = express();
+
+const corsMiddleware = require("../cors");
 
 dotenv.config();
+
+app.options("*", corsMiddleware);
+app.use(corsMiddleware);
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 mongoose

@@ -1,7 +1,7 @@
 import "./post.css";
 import postImg from "../../images/haus.jpg";
 
-export default function Post() {
+export default function Post({ post }) {
   return (
     <div className="post">
       <img className="postImg" src={postImg} alt="" />
@@ -9,11 +9,9 @@ export default function Post() {
         <div className="postCats">
           <div className="postCat">Music</div>
           <div className="postCat">Life</div>
-          <span className="postTitle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-          </span>
+          <span className="postTitle">{post.title}</span>
           <hr className="line-height" />
-          <div className="postDate"> 1 hour ago</div>
+          <div className="postDate"> {post.createdAt}</div>
           <div className="postDescription">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, quas
             enim qui, nam omnis inventore iste voluptates, sit error asperiores
