@@ -28,7 +28,9 @@ export default function Sidebar() {
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           {cats.map((c) => (
-            <li className="sidebarListItem">{c.name}</li>
+            <li className="sidebarListItem" key={c._id}>
+              {c.name}
+            </li>
           ))}
         </ul>
       </div>

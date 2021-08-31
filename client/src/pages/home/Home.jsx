@@ -4,9 +4,13 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import "./home.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
+  const location = useLocation();
+
+  console.log(location);
 
   useEffect(() => {
     const fetchPosts = async () => {
