@@ -2,13 +2,14 @@ import axios from "axios";
 import "./singlePost.css";
 // import spImg from "../../images/meri.jpg";
 import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function SinglePost() {
   const location = useLocation();
   console.log(location);
-  // console.log(location.pathname.split("/")[2]);
   const path = location.pathname.split("/")[2];
+  console.log(location.pathname.split("/")[2]);
 
   const [post, setPost] = useState({});
 
@@ -35,7 +36,10 @@ export default function SinglePost() {
         </h1>
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
-            Author: <b>{post.username}</b>
+            Author:
+            <Link to={`/?user=${post.username}`} className="link">
+              <b>{post.username}</b>
+            </Link>
           </span>
           <span className="singlePostDate">
             {new Date(post.createdAt).toDateString()}

@@ -8,25 +8,25 @@ import { useLocation } from "react-router";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
-  const location = useLocation();
+  const { search } = useLocation();
 
   console.log(location);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get("/api/posts");
+        const res = await axios.get("/api/posts" + search);
         setPosts(res.data);
         console.log(res);
       } catch (error) {
         // Not in the 200 response range
-        // console.log(error.response.data);
-        // console.log(error.response.status);
-        // console.log(error.response.headers);
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
       }
     };
     fetchPosts();
-  }, []);
+  }, [search]);
 
   return (
     <>
