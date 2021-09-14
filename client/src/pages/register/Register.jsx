@@ -18,7 +18,7 @@ export default function Register() {
         email,
         password,
       });
-      // res.data && window.location.replace("/api/auth/login");
+      res.data && window.location.replace("/login");
       console.log("registering");
       console.log(res);
     } catch (err) {
@@ -61,6 +61,11 @@ export default function Register() {
             Login
           </Link>
         </button>
+        {error && (
+          <span style={{ color: "red", marginTop: "10px" }}>
+            Something went wrong!
+          </span>
+        )}
       </form>
     </div>
   );
