@@ -62,7 +62,14 @@ export default function Register() {
           </Link>
         </button>
         {error && (
-          <span style={{ color: "red", marginTop: "10px" }}>
+          <span
+            style={{
+              fontFamily: "sans-serif",
+              color: "orange",
+              fontStyle: "italics",
+              marginTop: "10px",
+            }}
+          >
             Something went wrong!
           </span>
         )}

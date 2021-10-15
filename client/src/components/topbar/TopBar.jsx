@@ -1,9 +1,11 @@
 import "./topbar.css";
 import Profile from "../../images/crest_trans_black.png";
 import { Link } from "react-router-dom";
+import { Context } from "../../context/Context";
+import { useContext } from "react";
 
 export default function TopBar() {
-  const user = false;
+  const { user } = useContext(Context);
   return (
     <div className="top">
       <div className="topLeft">

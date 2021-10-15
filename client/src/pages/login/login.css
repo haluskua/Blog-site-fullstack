@@ -35,11 +35,20 @@
 .loginButton {
   margin-top: 20px;
   cursor: pointer;
-  background-color: lightcoral;
+  background-color: coral;
   border: none;
   color: white;
   border-radius: 10px;
   padding: 10px;
+}
+.loginButton:disable:hover {
+  background-color: red;
+}
+
+.loginButton:disabled {
+  cursor: not-allowed;
+  background-color: rgb(255, 198, 198);
+  border-radius: 1px solid coral;
 }
 
 .loginRegisterButton {
