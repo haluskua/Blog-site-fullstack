@@ -10,3 +10,6 @@ export const LoginSuccess = (user) => ({
 export const LoginFailure = () => ({
   TYPE: "LOGIN_FAILURE",
 });
+export const Logout = () => ({
+  TYPE: "LOGOUT",
+});
