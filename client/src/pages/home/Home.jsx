@@ -1,4 +1,4 @@
-import Header from "../../components/header/Header";
+import Header from "../../components/Header/Header";
 import Posts from "../../components/posts/Posts";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./home.css";
